@@ -11,6 +11,23 @@ nmap -sT <ip>
 nmap -sS <ip>
 ```
 
+- Null scan - stealth - all flags are 0
+```
+nmap -sN <ip>
+```
+
+- FIN scan -sends with fin flag from beginning - stealh
+```
+nmap -sF <ip>
+```
+
+- XMAS scan - mixing the flags to wrong one so app will RST if open - stealth
+```
+nmap -sX <ip>
+```
+
+- XMAS
+
 ### UDP
 - UDP scan
 ```
