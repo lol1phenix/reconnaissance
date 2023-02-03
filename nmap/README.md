@@ -118,3 +118,29 @@ nmap --data-length <bytes> <ip>  #custom size of data appended to packet
 nmap -sS --reason <ip>
 nmap -sS -vv <ip>
 ```
+
+- OS detection - add possible OS guess running on that node
+
+```shell
+nmap -sS -O <ip>
+```
+
+- Output formatting
+
+```shell
+nmap -sS -oN <ip> # normal, same is to console
+nmap -sS -oG <ip> # grepabble
+nmap -sS -oX <ip> #xml
+```
+
+## Custom scripts - NSE
+
+- scripts located in /usr/share/nmap/scripts
+- use --script to define what you want to use
+- by default we use default, defined via -sC too
+- more is possible: auth, broadcast, brute, default, discovery, dos, exploit, external, fuzzer, intrusive, malware, safe, version, vuln
+- run custom script
+
+```shell
+nmap --script "<name>" <ip>
+```
